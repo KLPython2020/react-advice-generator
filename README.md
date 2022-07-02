@@ -31,37 +31,37 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/KLPython2020/advice-generator]
-- Live Site URL: [https://advice-generator-sage.vercel.app/](https://advice-generator-sage.vercel.app/)
+- Solution URL: [https://github.com/KLPython2020/react-advice-generator]
+- Live Site URL: [https://react-advice-generator-one.vercel.app/](https://react-advice-generator-one.vercel.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
+- Create-react-app
+- Axios
 - CSS Grid
 - Mobile-first workflow
-- Vanilla Javascript
-- [Open-props](https://open-props.style/) - For some styles
 
 
 ### What I learned
 
-One of the things I tackled while coding this project is managing click events. I did a deep dive into the difference between debouncing and throttling.
-I ended up using the throttling technique to manage how often will the click event fire.
+One of the things I tackled while coding this project is learning how to apply useState and useEffect, while handling the click event I added to the button.
 
-I also found a quick reference for styling the animation of the button from [Open-props.style](https://open-props.style/) created by [Adam Argyle](https://github.com/argyleink).
+I also found a YouTube channel that taught me how to use the hooks useState, useEffect, and the click event "onClick" created by [CodeEvolution](https://youtu.be/zm_09NER-R0).
 
 
 ### Continued development
 
-There is room for improvement with both my css and javascript, but the goal now is to create this in react.
+I have accomplished my goal of coding this challenge in react. Previously I built this using pure vanilla javascript. You can find the project at 
+
+- Solution URL: [https://github.com/KLPython2020/advice-generator]
+- Live Site URL: [https://advice-generator-sage.vercel.app/](https://advice-generator-sage.vercel.app/)
 
 
 ### Useful resources
 
-- [Throttling vs Debouncing](https://gomakethings.com/debouncing-vs.-throttling-with-vanilla-js/) - This helped me manage the click event of the dice, so there are fewer calls to the api and displaying the data is smoother.
-- [Open-props.style](https://open-props.style/) - This was a fast way to do some animation and style the container holding everything for the advice generator.
+- [CodeEvolution](https://youtu.be/zm_09NER-R0)
 
 ## Author
 

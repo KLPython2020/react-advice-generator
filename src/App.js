@@ -1,24 +1,43 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios'
 import './App.css';
 
 function App() {
+  const [slips, setSlip] = useState([])
+  const [Clicked, setClicked] = useState(false)
+  const handleClick = ()=>{
+    setClicked(!Clicked)
+  }
+  useEffect(() => {
+      axios.get('https://api.adviceslip.com/advice')
+      .then(res => {
+          console.log(res)
+          setSlip(res.data.slip)
+      })
+      .catch(err => {
+          console.log(err)
+      })
+  },[Clicked])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <div className="container">
+        <div>
+          <div className="quote-number">Advice #{slips.id}</div>
+          <div className="quote">{slips.advice}</div>
+        </div>
+        <div className="quote-footer">
+          <img src="./images/pattern-divider-mobile.svg" alt="Advice pattern divider mobile"/>
+        </div>
+        <div className="button-container">
+            <div className="button" aria-label="dice" onClick={handleClick}>
+            <img 
+                alt="dice - click to generate an advice" 
+                aria-label="dice" 
+                src="./images/icon-dice.svg"/>
+            </div>
+      </div>
+      </div>
+    </main>
   );
 }
 

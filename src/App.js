@@ -35,7 +35,7 @@ function App() {
                 aria-label="dice" 
                 src="./images/icon-dice.svg"/>
             </div>
-      </div>
+        </div>
       </div>
     </main>
   );
